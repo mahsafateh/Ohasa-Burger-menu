@@ -13,16 +13,11 @@ html {
   box-sizing: inherit;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
 body {
   font-size: 1.4rem;
   font-family: 'Source Serif Pro', serif;
   line-height: 2.4rem;
-  color: #778f82;
+  color: aliceblue;
 }
 
 html,
@@ -49,6 +44,11 @@ header {
   width: 100%;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 /* Banner */
 
 #banner {
@@ -61,7 +61,6 @@ header {
 .banner__bg-container {
   grid-column: 1 / 4;
   grid-row: 1 / 4;
-  /* overflow-y: hidden; */
 }
 
 .banner__bg-image {
@@ -84,13 +83,13 @@ header {
   line-height: 5rem;
 }
 
-.banner__content--h2{
+.banner__content--h2 {
   font-size: 10rem;
   font-weight: 600;
   line-height: 10.8rem;
 }
 
-.btn{
+.btn {
   background-color: aliceblue;
   color: black;
   display: inline-block;
@@ -99,15 +98,81 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
-  padding:1.5rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   margin: 1.5rem 3rem;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #778f82;
   transition: all 0.7s ease;
   color: aliceblue;
-  box-shadow: 0 12px 24px rgb(0, 0, 0 , 0.5);
+  box-shadow: 0 12px 24px rgb(0, 0, 0, 0.5);
 }
 
 /* End Of Banner */
+
+/* About Section */
+
+#about {
+  display: grid;
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/123/original/bg.f.jpg?1670498898) top no-repeat;
+  background-size: cover;
+  grid-template-columns: 25rem repeat(2, minmax(0, 1fr)) 25rem;
+  grid-template-rows: 20rem 1fr 20rem;
+  grid-template-areas: '. title title .'
+    '. content-left content-right .'
+    'figures figures figures figures';
+  width: 100%;
+  gap: 2rem;
+}
+
+.about__content-left {
+  grid-area: content-left;
+  font-size: 2.6rem;
+  line-height: 3.9rem;
+}
+
+.about__content-right {
+  grid-area: content-right;
+  font-size: 2.6rem;
+  line-height: 3.9rem;
+}
+
+.about__figures {
+  grid-area: figures;
+  display: grid;
+  grid-template-columns: repeat(3, 20rem);
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.about__figure-number {
+  font-size: 7rem;
+  line-height: 5.6rem;
+  font-weight: 300;
+}
+
+.about__figure-text {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#about .section-heading {
+  grid-area: title;
+  text-align: center;
+}
+
+.section-heading__back ,
+.section-heading__front {
+  display: block;
+}
+
+.section-heading__back{
+  opacity: 0.2;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 4rem;
+}
+
+/* End Of About Section */
