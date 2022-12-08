@@ -17,12 +17,6 @@ body {
   font-size: 1.4rem;
   font-family: 'Source Serif Pro', serif;
   line-height: 2.4rem;
-  color: aliceblue;
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
 
 header {
@@ -56,6 +50,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(3, 1fr);
+  color: rgba(193, 203, 212, 0.897);
 }
 
 .banner__bg-container {
@@ -64,6 +59,7 @@ img {
 }
 
 .banner__bg-image {
+  width: 100vw;
   height: 100%;
   object-fit: cover;
 }
@@ -103,9 +99,9 @@ img {
 }
 
 .btn:hover {
-  background-color: #778f82;
+  background-color: rgba(193, 193, 209, 0.986);
   transition: all 0.7s ease;
-  color: aliceblue;
+  color: rgb(90, 93, 95);
   box-shadow: 0 12px 24px rgb(0, 0, 0, 0.5);
 }
 
@@ -114,8 +110,8 @@ img {
 /* About Section */
 
 #about {
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/160/original/subohasa.jpg?1670508068) top no-repeat;
   display: grid;
-  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/123/original/bg.f.jpg?1670498898) top no-repeat;
   background-size: cover;
   grid-template-columns: 25rem repeat(2, minmax(0, 1fr)) 25rem;
   grid-template-rows: 20rem 1fr 20rem;
@@ -127,15 +123,22 @@ img {
 }
 
 .about__content-left {
+  background-color: rgba(240, 248, 255, 0.281);
+  padding: 20px 35px;
+  border-radius: 10px;
   grid-area: content-left;
   font-size: 2.6rem;
   line-height: 3.9rem;
 }
 
 .about__content-right {
+  background-color: rgba(240, 248, 255, 0.281);
   grid-area: content-right;
+  border-radius: 10px;
+  padding: 20px 35px;
   font-size: 2.6rem;
   line-height: 3.9rem;
+  color:  rgb(59, 59, 59);
 }
 
 .about__figures {
@@ -144,6 +147,7 @@ img {
   grid-template-columns: repeat(3, 20rem);
   justify-content: space-evenly;
   text-align: center;
+  color: aliceblue;
 }
 
 .about__figure-number {
